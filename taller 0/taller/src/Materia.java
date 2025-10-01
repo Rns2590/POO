@@ -61,6 +61,5 @@ public class Materia {
         return "Materia [id=" + id + ", nombre=" + nombre + ", codigo=" + codigo + ", creditos=" + creditos
                 + ", profesor=" + profesor + "]";
     }
-
-
 }
+
