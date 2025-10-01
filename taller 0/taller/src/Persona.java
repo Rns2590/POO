@@ -9,7 +9,7 @@ class Persona {
         System.out.println("Hola, soy una persona llamada " + nombre);
     }
 
-     public boolean equals(Object obj) {
+    public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Persona persona = (Persona) obj;

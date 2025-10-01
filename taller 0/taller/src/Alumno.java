@@ -6,6 +6,7 @@ class Alumno extends Persona {
         this.carrera = carrera;
     }
 
+    @Override
     public void presentarse() {
         System.out.println("Hola, soy el alumno " + nombre + " y estudio " + carrera);
     }

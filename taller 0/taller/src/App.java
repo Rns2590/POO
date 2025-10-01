@@ -41,7 +41,7 @@ public class App {
         }
 
         Persona p1 = new Persona("Luis");
-        Persona p2 = new Persona("Luis");
+        Persona p2 = new Profesor("Luis", "Física");
 
         System.out.println(p1.equals(p2) ? "Iguales" : "Diferentes");
 
