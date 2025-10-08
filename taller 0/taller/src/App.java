@@ -46,6 +46,50 @@ public class App {
         // seran iguales ??
         System.out.println(p1.equals(p2) ? "Iguales" : "Diferentes");
 
+
+        // === Prueba de promedio de alumno ===
+        calculo.setNota(4.5);
+        algebra.setNota(3.5);
+        Materia[] materias = { calculo, algebra };
+        
+
+        Alumno estudiante = new Alumno("Rodrigo","Arquitectura");
+        estudiante.materias = materias;
+
+        // Llamada recursiva → suma total, después se divide para obtener promedio
+        double sumaRecursiva = estudiante.calcularPromedioRecursivo(materias, 0);
+        double promedioRecursivo = sumaRecursiva / materias.length;
+
+        double promedioIterativo = estudiante.calcularPromedioIterativo();
+
+        System.out.println("Promedio (recursivo): " + promedioRecursivo);
+        System.out.println("Promedio (iterativo): " + promedioIterativo);
+
+        
+        // === Prueba de ordenamiento y búsqueda ===
+        // === Lista de alumnos ===
+        Alumno[] alumnos = {
+            new Alumno("Ana", "Medicina"),
+            new Alumno("Luis", "Derecho"),
+            new Alumno("Carlos", "Ingeniería"),
+            new Alumno("Beatriz", "Arquitectura")
+        };
+
+        // Ordenar alumnos por nombre (burbuja)
+        Universidad.ordenarPorNombreBurbuja(alumnos);
+
+        System.out.println("\nAlumnos ordenados por nombre:");
+        for (Alumno a : alumnos) System.out.println(a.getNombre());
+
+        // // Búsqueda binaria
+        // String nombreBuscado = "Carlos";
+        // int indice = Universidad.busquedaBinariaAlumnos(alumnos, nombreBuscado);
+
+        // if (indice != -1)
+        //     System.out.println("\nAlumno encontrado: " + alumnos[indice].getNombre());
+        // else
+        //     System.out.println("\nAlumno " + nombreBuscado + " no encontrado.");
+
     }
 
 }

@@ -9,6 +9,7 @@ public class Materia {
     private String codigo;
     private int creditos;
     private String profesor;
+    private double nota;
 
     // Constructor
     public Materia() {
@@ -56,6 +57,14 @@ public class Materia {
         this.profesor = profesor;
     }    
     
+    public double getNota() {
+        return nota;
+    }
+
+    public void setNota(double nota) {
+        this.nota = nota;
+    }
+
     // metodo toString para mostrar la información de la materia
     public String toString() {
         return "Materia [id=" + id + ", nombre=" + nombre + ", codigo=" + codigo + ", creditos=" + creditos
