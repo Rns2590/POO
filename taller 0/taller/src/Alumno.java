@@ -1,9 +1,9 @@
-class Alumno extends Persona {
+class Alumno extends Persona implements MiembroUniversidad{
     private String carrera;
     public Materia[] materias;
 
     public Alumno(String nombre, String carrera) {
-        super(nombre); // llama al constructor de Persona
+        super(nombre,carrera); // llama al constructor de Persona
         this.carrera = carrera;
     }
 
@@ -59,6 +59,15 @@ class Alumno extends Persona {
         }
     }
 
+    @Override
+    public String obtenerRol() {
+        return "Profesor";
+    }
 
+    @Override
+    public String obtenerInformacionCompleta() {
+        return "Nombre: " + nombre + " " + apellido +
+               ", Carrera: " + carrera;
+    }
 
 }

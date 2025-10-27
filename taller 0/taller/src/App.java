@@ -30,56 +30,56 @@ public class App {
         uni.materias[uni.numeroMaterias++] = calculo;
         System.out.println("La universidad " + uni.nombre + " tiene " + uni.numeroMaterias + " materias.");
         
-        Persona[] personas = new Persona[3];
+       // Persona[] personas = new Persona[3];
 
-        personas[0] = new Persona("Juan");
-        personas[1] = new Alumno("Carla", "Ingeniería");
-        personas[2] = new Profesor("Pedro", "Matemáticas");
+        // personas[0] = new Persona("Juan");
+        // personas[1] = new Alumno("Carla", "Ingeniería");
+        // personas[2] = new Profesor("Pedro", "Matemáticas");
 
-        for (Persona p : personas) {
-            p.presentarse(); // llama al método adecuado según el tipo real
-        }
+        // for (Persona p : personas) {
+        //     p.presentarse(); // llama al método adecuado según el tipo real
+        // }
 
-        Persona p1 = new Persona("Luis");
-        Persona p2 = new Profesor("Luis");
+        // Persona p1 = new Persona("Luis");
+        // Persona p2 = new Profesor("Luis");
         
         // seran iguales ??
-        System.out.println(p1.equals(p2) ? "Iguales" : "Diferentes");
+        // System.out.println(p1.equals(p2) ? "Iguales" : "Diferentes");
 
 
         // === Prueba de promedio de alumno ===
-        calculo.setNota(4.5);
-        algebra.setNota(3.5);
-        Materia[] materias = { calculo, algebra };
+        // calculo.setNota(4.5);
+        // algebra.setNota(3.5);
+        // Materia[] materias = { calculo, algebra };
         
 
-        Alumno estudiante = new Alumno("Rodrigo","Arquitectura");
-        estudiante.materias = materias;
+        // Alumno estudiante = new Alumno("Rodrigo","Arquitectura");
+        // estudiante.materias = materias;
 
         // Llamada recursiva → suma total, después se divide para obtener promedio
-        double sumaRecursiva = estudiante.calcularPromedioRecursivo(materias, 0);
-        double promedioRecursivo = sumaRecursiva / materias.length;
+        // double sumaRecursiva = estudiante.calcularPromedioRecursivo(materias, 0);
+        // double promedioRecursivo = sumaRecursiva / materias.length;
 
-        double promedioIterativo = estudiante.calcularPromedioIterativo();
+        // double promedioIterativo = estudiante.calcularPromedioIterativo();
 
-        System.out.println("Promedio (recursivo): " + promedioRecursivo);
-        System.out.println("Promedio (iterativo): " + promedioIterativo);
+        // System.out.println("Promedio (recursivo): " + promedioRecursivo);
+        // System.out.println("Promedio (iterativo): " + promedioIterativo);
 
         
-        // === Prueba de ordenamiento y búsqueda ===
-        // === Lista de alumnos ===
-        Alumno[] alumnos = {
-            new Alumno("Ana", "Medicina"),
-            new Alumno("Luis", "Derecho"),
-            new Alumno("Carlos", "Ingeniería"),
-            new Alumno("Beatriz", "Arquitectura")
-        };
+        // // === Prueba de ordenamiento y búsqueda ===
+        // // === Lista de alumnos ===
+        // Alumno[] alumnos = {
+        //     new Alumno("Ana", "Medicina"),
+        //     new Alumno("Luis", "Derecho"),
+        //     new Alumno("Carlos", "Ingeniería"),
+        //     new Alumno("Beatriz", "Arquitectura")
+        // };
 
-        // Ordenar alumnos por nombre (burbuja)
-        Universidad.ordenarPorNombreBurbuja(alumnos);
+        // // Ordenar alumnos por nombre (burbuja)
+        // Universidad.ordenarPorNombreBurbuja(alumnos);
 
-        System.out.println("\nAlumnos ordenados por nombre:");
-        for (Alumno a : alumnos) System.out.println(a.getNombre());
+        // System.out.println("\nAlumnos ordenados por nombre:");
+        // for (Alumno a : alumnos) System.out.println(a.getNombre());
 
         // // Búsqueda binaria
         // String nombreBuscado = "Carlos";
@@ -89,6 +89,16 @@ public class App {
         //     System.out.println("\nAlumno encontrado: " + alumnos[indice].getNombre());
         // else
         //     System.out.println("\nAlumno " + nombreBuscado + " no encontrado.");
+
+        MiembroUniversidad m2 = new Profesor("rodrigo", "Arquitectura", "Matematicas");
+        MiembroUniversidad m3 = new Alumno("Ana", "Medicina");
+
+        Profesor profe = new Profesor("Luis", "Gomez", "Historia");
+        System.out.println(profe.obtenerInformacionCompleta());
+
+        System.out.println(m2.obtenerInformacionCompleta());
+        System.out.println(m3.obtenerInformacionCompleta());
+
 
     }
 
